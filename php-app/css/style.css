@@ -7,10 +7,10 @@
 }
 
 :root {
-    --pink-primary: #C84F8A;
-    --pink-dark: #A83A70;
-    --pink-light: #E87DB0;
-    --pink-bg: #D1558C;
+    --pink-primary: #3DAA6B;
+    --pink-dark: #2C8050;
+    --pink-light: #78C99A;
+    --pink-bg: #4DB872;
     --white: #ffffff;
     --text-dark: #1a1a2e;
     --text-muted: #666;
@@ -22,7 +22,7 @@ body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     background-color: var(--pink-bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='1.5'%3E%3Cellipse cx='300' cy='300' rx='280' ry='220'/%3E%3Cellipse cx='300' cy='300' rx='240' ry='185'/%3E%3Cellipse cx='300' cy='300' rx='200' ry='150'/%3E%3Cellipse cx='300' cy='300' rx='160' ry='115'/%3E%3Cellipse cx='300' cy='300' rx='120' ry='80'/%3E%3Cellipse cx='300' cy='300' rx='80' ry='50'/%3E%3Cellipse cx='80' cy='80' rx='200' ry='160'/%3E%3Cellipse cx='80' cy='80' rx='160' ry='120'/%3E%3Cellipse cx='80' cy='80' rx='120' ry='85'/%3E%3Cellipse cx='520' cy='520' rx='220' ry='170'/%3E%3Cellipse cx='520' cy='520' rx='180' ry='135'/%3E%3Cellipse cx='520' cy='520' rx='140' ry='100'/%3E%3Cellipse cx='520' cy='100' rx='190' ry='150'/%3E%3Cellipse cx='520' cy='100' rx='150' ry='115'/%3E%3Cellipse cx='80' cy='500' rx='180' ry='140'/%3E%3Cellipse cx='80' cy='500' rx='140' ry='105'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='1.5'%3E%3Cellipse cx='300' cy='300' rx='280' ry='220'/%3E%3Cellipse cx='300' cy='300' rx='240' ry='185'/%3E%3Cellipse cx='300' cy='300' rx='200' ry='150'/%3E%3Cellipse cx='300' cy='300' rx='160' ry='115'/%3E%3Cellipse cx='300' cy='300' rx='120' ry='80'/%3E%3Cellipse cx='300' cy='300' rx='80' ry='50'/%3E%3Cellipse cx='80' cy='80' rx='200' ry='160'/%3E%3Cellipse cx='80' cy='80' rx='160' ry='120'/%3E%3Cellipse cx='80' cy='80' rx='120' ry='85'/%3E%3Cellipse cx='520' cy='520' rx='220' ry='170'/%3E%3Cellipse cx='520' cy='520' rx='180' ry='135'/%3E%3Cellipse cx='520' cy='520' rx='140' ry='100'/%3E%3Cellipse cx='520' cy='100' rx='190' ry='150'/%3E%3Cellipse cx='520' cy='100' rx='150' ry='115'/%3E%3Cellipse cx='80' cy='500' rx='180' ry='140'/%3E%3Cellipse cx='80' cy='500' rx='140' ry='105'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 600px 600px;
     overflow-x: hidden;
 }
@@ -193,7 +193,7 @@ body {
 
 .alert-success {
     background: #e8f5e9;
-    color: #2e7d32;
+    color: #1b5e20;
     border: 1px solid #a5d6a7;
 }
 
