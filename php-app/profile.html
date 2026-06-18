@@ -9,58 +9,83 @@
     <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
-    <div class="profile-wrapper">
-        <div class="profile-card">
-            <div class="profile-header">
-                <div class="profile-avatar" id="profile-avatar">U</div>
-                <div class="profile-name" id="profile-name">Loading...</div>
-                <div class="profile-email" id="profile-email"></div>
+    <div class="profile-page-wrapper">
+
+        <aside class="profile-sidebar">
+            <div class="sidebar-inner">
+                <div class="left-logo">GUVI</div>
+                <div class="sidebar-avatar" id="sidebar-avatar">U</div>
+                <div class="sidebar-name" id="sidebar-name">Loading...</div>
+                <div class="sidebar-email" id="sidebar-email"></div>
+                <div class="sidebar-divider"></div>
+                <nav class="sidebar-nav">
+                    <div class="sidebar-nav-item active">&#128100; My Profile</div>
+                </nav>
+                <button id="btn-logout" class="btn-logout-sidebar">&#8594; Logout</button>
             </div>
+        </aside>
 
-            <div class="profile-body">
-                <div id="alert-msg" class="alert-msg" style="display:none"></div>
+        <main class="profile-main">
+            <div class="profile-main-inner">
 
-                <div class="section-title">Personal Details</div>
-
-                <div class="profile-row">
-                    <span class="profile-row-label">Age</span>
-                    <span class="profile-row-value" id="val-age">—</span>
-                    <button class="btn-edit" data-field="age" data-label="Age" data-type="number">Edit</button>
+                <div class="profile-topbar">
+                    <div class="profile-mobile-header">
+                        <div class="profile-avatar" id="profile-avatar">U</div>
+                        <div>
+                            <div class="profile-name" id="profile-name">Loading...</div>
+                            <div class="profile-email" id="profile-email"></div>
+                        </div>
+                    </div>
+                    <button id="btn-logout-mobile" class="btn-logout-mobile">Logout</button>
                 </div>
 
-                <div class="profile-row">
-                    <span class="profile-row-label">Date of Birth</span>
-                    <span class="profile-row-value" id="val-dob">—</span>
-                    <button class="btn-edit" data-field="dob" data-label="Date of Birth" data-type="date">Edit</button>
+                <div class="profile-content-card">
+                    <div id="alert-msg" class="alert-msg" style="display:none"></div>
+
+                    <div class="section-title">Personal Details</div>
+
+                    <div class="profile-grid">
+                        <div class="profile-row">
+                            <span class="profile-row-label">Age</span>
+                            <span class="profile-row-value" id="val-age">—</span>
+                            <button class="btn-edit" data-field="age" data-label="Age" data-type="number">Edit</button>
+                        </div>
+
+                        <div class="profile-row">
+                            <span class="profile-row-label">Date of Birth</span>
+                            <span class="profile-row-value" id="val-dob">—</span>
+                            <button class="btn-edit" data-field="dob" data-label="Date of Birth" data-type="date">Edit</button>
+                        </div>
+
+                        <div class="profile-row">
+                            <span class="profile-row-label">Contact</span>
+                            <span class="profile-row-value" id="val-contact">—</span>
+                            <button class="btn-edit" data-field="contact" data-label="Contact Number" data-type="tel">Edit</button>
+                        </div>
+
+                        <div class="profile-row">
+                            <span class="profile-row-label">City</span>
+                            <span class="profile-row-value" id="val-city">—</span>
+                            <button class="btn-edit" data-field="city" data-label="City" data-type="text">Edit</button>
+                        </div>
+
+                        <div class="profile-row">
+                            <span class="profile-row-label">Address</span>
+                            <span class="profile-row-value" id="val-address">—</span>
+                            <button class="btn-edit" data-field="address" data-label="Address" data-type="text">Edit</button>
+                        </div>
+
+                        <div class="profile-row">
+                            <span class="profile-row-label">Bio</span>
+                            <span class="profile-row-value" id="val-bio">—</span>
+                            <button class="btn-edit" data-field="bio" data-label="Bio" data-type="text">Edit</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="profile-row">
-                    <span class="profile-row-label">Contact</span>
-                    <span class="profile-row-value" id="val-contact">—</span>
-                    <button class="btn-edit" data-field="contact" data-label="Contact Number" data-type="tel">Edit</button>
-                </div>
-
-                <div class="profile-row">
-                    <span class="profile-row-label">City</span>
-                    <span class="profile-row-value" id="val-city">—</span>
-                    <button class="btn-edit" data-field="city" data-label="City" data-type="text">Edit</button>
-                </div>
-
-                <div class="profile-row">
-                    <span class="profile-row-label">Address</span>
-                    <span class="profile-row-value" id="val-address">—</span>
-                    <button class="btn-edit" data-field="address" data-label="Address" data-type="text">Edit</button>
-                </div>
-
-                <div class="profile-row" style="border-bottom:none">
-                    <span class="profile-row-label">Bio</span>
-                    <span class="profile-row-value" id="val-bio">—</span>
-                    <button class="btn-edit" data-field="bio" data-label="Bio" data-type="text">Edit</button>
-                </div>
-
-                <button id="btn-logout" class="btn-logout">Logout</button>
             </div>
-        </div>
+        </main>
+
     </div>
 
     <div class="edit-modal-overlay" id="edit-modal-overlay">

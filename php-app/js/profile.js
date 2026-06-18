@@ -20,11 +20,18 @@ $(document).ready(function () {
     }
 
     function setProfileHeader() {
-        var fullName = (user.first_name || '') + ' ' + (user.last_name || '');
-        $('#profile-name').text(fullName.trim() || 'User');
-        $('#profile-email').text(user.email || '');
+        var fullName = ((user.first_name || '') + ' ' + (user.last_name || '')).trim() || 'User';
         var initials = ((user.first_name || 'U')[0] + (user.last_name || '')[0]).toUpperCase();
-        $('#profile-avatar').text(initials || 'U');
+
+        /* mobile topbar */
+        $('#profile-avatar').text(initials);
+        $('#profile-name').text(fullName);
+        $('#profile-email').text(user.email || '');
+
+        /* desktop sidebar */
+        $('#sidebar-avatar').text(initials);
+        $('#sidebar-name').text(fullName);
+        $('#sidebar-email').text(user.email || '');
     }
 
     function setProfileFields(profile) {
@@ -44,18 +51,28 @@ $(document).ready(function () {
             success: function (response) {
                 if (response.success) {
                     currentProfile = response.profile || {};
+                    if (response.user) { user = response.user; }
                     setProfileHeader();
                     setProfileFields(currentProfile);
                 } else {
-                    window.location.href = 'login.html';
+                    doLogout();
                 }
             },
             error: function (xhr) {
-                if (xhr.status === 401) {
-                    localStorage.removeItem('guvi_token');
-                    localStorage.removeItem('guvi_user');
-                    window.location.href = 'login.html';
-                }
+                if (xhr.status === 401) { doLogout(); }
+            }
+        });
+    }
+
+    function doLogout() {
+        $.ajax({
+            url: 'php/logout.php',
+            type: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token },
+            complete: function () {
+                localStorage.removeItem('guvi_token');
+                localStorage.removeItem('guvi_user');
+                window.location.href = 'login.html';
             }
         });
     }
@@ -63,6 +80,7 @@ $(document).ready(function () {
     setProfileHeader();
     loadProfile();
 
+    /* Edit buttons */
     $('.btn-edit').on('click', function () {
         editingField = $(this).data('field');
         var label    = $(this).data('label');
@@ -93,9 +111,7 @@ $(document).ready(function () {
         if (!editingField) return;
 
         var value = $.trim($('#edit-modal-input').val());
-        if (!value) {
-            return;
-        }
+        if (!value) return;
 
         var updateData = {};
         updateData[editingField] = value;
@@ -129,20 +145,10 @@ $(document).ready(function () {
         });
     });
 
-    $('#btn-logout').on('click', function () {
-        var $btn = $(this);
-        $btn.prop('disabled', true).text('Logging out...');
-
-        $.ajax({
-            url: 'php/logout.php',
-            type: 'POST',
-            headers: { 'Authorization': 'Bearer ' + token },
-            complete: function () {
-                localStorage.removeItem('guvi_token');
-                localStorage.removeItem('guvi_user');
-                window.location.href = 'login.html';
-            }
-        });
+    /* Logout — both desktop sidebar and mobile button */
+    $('#btn-logout, #btn-logout-mobile').on('click', function () {
+        $(this).prop('disabled', true).text('Logging out...');
+        doLogout();
     });
 
 });
