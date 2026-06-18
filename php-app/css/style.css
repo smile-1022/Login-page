@@ -203,6 +203,70 @@ body {
     border: 1px solid #f48fb1;
 }
 
+.forgot-link {
+    color: var(--pink-primary);
+    text-decoration: none;
+}
+.forgot-link:hover {
+    text-decoration: underline;
+    color: var(--pink-dark);
+}
+
+.reset-info-box {
+    background: #f0faf4;
+    border: 1.5px solid var(--pink-light);
+    border-radius: 16px;
+    padding: 22px 20px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.reset-info-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+.reset-info-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+.reset-link-text {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--pink-primary);
+    word-break: break-all;
+    font-weight: 500;
+    text-decoration: none;
+    background: #fff;
+    border: 1px dashed var(--pink-light);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+}
+.reset-link-text:hover {
+    text-decoration: underline;
+}
+.reset-info-note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.expired-box {
+    text-align: center;
+    padding: 10px 0;
+}
+.expired-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+.expired-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 .custom-input {
     border-radius: 12px !important;
     border: 1.5px solid var(--border-color) !important;
