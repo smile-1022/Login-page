@@ -1,0 +1,93 @@
+.welcome-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.welcome-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.welcome-card h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.welcome-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.btn-signup-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.btn-signup-link:hover {
+    gap: 14px;
+    color: var(--pink-primary);
+}
+
+.btn-signup-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--pink-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.btn-signup-link:hover .btn-signup-icon {
+    background: var(--pink-dark);
+}
+
+.welcome-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 24px 0;
+}
+
+.btn-login-link {
+    display: block;
+    text-align: center;
+    color: var(--pink-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 12px;
+    border: 2px solid var(--pink-primary);
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.btn-login-link:hover {
+    background: var(--pink-primary);
+    color: #fff;
+}
